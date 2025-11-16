@@ -1,0 +1,27 @@
+{
+  "drive": {
+    "type": "sparkmax_kMXP_SPI",
+    "id": 5,
+    "canbus": null
+  },
+  "angle": {
+    "type": "sparkmax_kMXP_SPI",
+    "id": 6,
+    "canbus": null
+  },
+  "encoder": {
+    "type": "attached",
+    "id": 11,
+    "canbus": null
+  },
+  "inverted": {
+    "drive": false,
+    "angle": false
+  },
+  "absoluteEncoderInverted": true,
+  "absoluteEncoderOffset": 82.62,
+  "location": {
+    "front": -12,
+    "left": -12
+  }
+}
