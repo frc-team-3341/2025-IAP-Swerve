@@ -2,7 +2,7 @@
   "imu": {
     "type": "navx_kMXP_SPI",
     "id": 0,
-    "canbus": null
+    "canbus": "roborio"
   },
   "invertedIMU": false,
   "modules": [
