@@ -3,7 +3,7 @@
   "imu": {
     "type": "navx",
     "id": 13,
-    "canbus": "roborio"
+    "canbus": null
   },
   "invertedIMU": true,
   "modules": [
