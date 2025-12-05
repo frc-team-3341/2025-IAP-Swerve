@@ -1,27 +1,44 @@
 {
+  "location": {
+    "front": -22,
+    "left": 22
+  },
+  "absoluteEncoderOffset": 108.11,
   "drive": {
+<<<<<<< Updated upstream
     "type": "sparkmax_kMXP_SPI",
+=======
+    "type": "sparkmax_neo",
+>>>>>>> Stashed changes
     "id": 7,
-    "canbus": null
+    "canbus": "null"
   },
   "angle": {
+<<<<<<< Updated upstream
     "type": "sparkmax_kMXP_SPI",
+=======
+    "type": "sparkmax_neo",
+>>>>>>> Stashed changes
     "id": 8,
-    "canbus": null
+    "canbus": "null"
   },
   "encoder": {
-    "type": "attached",
+    "type": "cancoder",
     "id": 12,
-    "canbus": null
+    "canbus": "null"
   },
+  "absoluteEncoderInverted": true,
   "inverted": {
     "drive": false,
     "angle": false
+<<<<<<< Updated upstream
   },
   "absoluteEncoderInverted": true,
   "absoluteEncoderOffset": 108.11,
   "location": {
     "front": -12,
     "left": 12
+=======
+>>>>>>> Stashed changes
   }
 }
