@@ -1,9 +1,5 @@
 {
   "location": {
-<<<<<<< Updated upstream
-    "front": -12,
-    "left": -12
-=======
     "front": 22,
     "left": 22
   },
@@ -27,6 +23,5 @@
   "inverted": {
     "drive": false,
     "angle": false
->>>>>>> Stashed changes
   }
 }

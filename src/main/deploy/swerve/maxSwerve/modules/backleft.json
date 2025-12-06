@@ -5,20 +5,12 @@
   },
   "absoluteEncoderOffset": 108.11,
   "drive": {
-<<<<<<< Updated upstream
-    "type": "sparkmax_kMXP_SPI",
-=======
     "type": "sparkmax_neo",
->>>>>>> Stashed changes
     "id": 7,
     "canbus": "null"
   },
   "angle": {
-<<<<<<< Updated upstream
-    "type": "sparkmax_kMXP_SPI",
-=======
     "type": "sparkmax_neo",
->>>>>>> Stashed changes
     "id": 8,
     "canbus": "null"
   },
@@ -31,14 +23,5 @@
   "inverted": {
     "drive": false,
     "angle": false
-<<<<<<< Updated upstream
-  },
-  "absoluteEncoderInverted": true,
-  "absoluteEncoderOffset": 108.11,
-  "location": {
-    "front": -12,
-    "left": 12
-=======
->>>>>>> Stashed changes
   }
 }
