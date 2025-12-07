@@ -69,7 +69,11 @@ public final class Constants {
 
     public static final double turnkP = 0.7; 
     public static final double turnkI = 0.0;
-    public static final double turnkD = 0.0;    
+    public static final double turnkD = 0.0;
+    
+    
+    public static final double kDrivingMotorReduction = 0.0;
+    public static final double kDriveWheelFreeSpeedRps = 0.0;
 }
     public static final class SwerveConstants {
         // These can be safely adjusted without adjusting discrete
@@ -98,5 +102,24 @@ public final class Constants {
         public static final double robotMassInKg = 54.43;
 
         public static final double wheelGripCoefficientOfFriction = 1.19;
+
+        public static final int  kFrontLeftDrivingCanId = 0;
+        public static final int kFrontLeftTurningCanId = 0;
+        public static final int kFrontLeftChassisAngularOffset = 0;
+
+        public static final int kFrontRightDrivingCanId = 0;
+        public static final int kFrontRightTurningCanId = 0;
+        public static final int kFrontRightChassisAngularOffset = 0;
+
+        public static final int kRearLeftDrivingCanId = 0;
+        public static final int kRearLeftTurningCanId = 0;
+        public static final int kBackLeftChassisAngularOffset = 0;
+
+        public static final int kRearRightDrivingCanId = 0;
+        public static final int kRearRightTurningCanId = 0;
+        public static final int kBackRightChassisAngularOffset = 0;
+        
+        public static double kMaxAngularSpeed = 0;
+
     }
 }
