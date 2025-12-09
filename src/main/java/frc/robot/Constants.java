@@ -5,6 +5,7 @@
 package frc.robot;
 
 import edu.wpi.first.math.geometry.Translation2d;
+import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
 import edu.wpi.first.math.util.Units;
 
 /**
@@ -103,23 +104,25 @@ public final class Constants {
 
         public static final double wheelGripCoefficientOfFriction = 1.19;
 
-        public static final int  kFrontLeftDrivingCanId = 0;
-        public static final int kFrontLeftTurningCanId = 0;
-        public static final int kFrontLeftChassisAngularOffset = 0;
+        public static final int  kFrontLeftDrivingCanId = 1;
+        public static final int kFrontLeftTurningCanId = 2;
+        public static final double kFrontLeftChassisAngularOffset = -62.51;
 
-        public static final int kFrontRightDrivingCanId = 0;
-        public static final int kFrontRightTurningCanId = 0;
-        public static final int kFrontRightChassisAngularOffset = 0;
+        public static final int kFrontRightDrivingCanId = 3;
+        public static final int kFrontRightTurningCanId = 4;
+        public static final double kFrontRightChassisAngularOffset = -179.82;
 
-        public static final int kRearLeftDrivingCanId = 0;
-        public static final int kRearLeftTurningCanId = 0;
-        public static final int kBackLeftChassisAngularOffset = 0;
+        public static final int kRearLeftDrivingCanId = 7;
+        public static final int kRearLeftTurningCanId = 8;
+        public static final double kBackLeftChassisAngularOffset = 108.11;
 
-        public static final int kRearRightDrivingCanId = 0;
-        public static final int kRearRightTurningCanId = 0;
-        public static final int kBackRightChassisAngularOffset = 0;
+        public static final int kRearRightDrivingCanId = 5;
+        public static final int kRearRightTurningCanId = 6;
+        public static final double kBackRightChassisAngularOffset = 82.62;
         
         public static double kMaxAngularSpeed = 0;
+        public static boolean kGyroReversed;
+        public static SwerveDriveKinematics kDriveKinematics;
 
     }
 }
