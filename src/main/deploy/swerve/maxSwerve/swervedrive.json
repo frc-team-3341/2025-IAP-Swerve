@@ -1,8 +1,14 @@
 {
   "imu": {
+<<<<<<< Updated upstream
+    "type": "navx_kMXP_SPI",
+    "id": 0,
+    "canbus": null
+=======
     "type": "navx_mxp_serial",
     "id": 13,
     "canbus": "rio"
+>>>>>>> Stashed changes
   },
   "invertedIMU": false,
   "modules": [

@@ -27,8 +27,6 @@ import edu.wpi.first.math.trajectory.Trajectory;
 import edu.wpi.first.math.util.Units;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.smartdashboard.Field2d;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -57,7 +55,7 @@ import swervelib.telemetry.SwerveDriveTelemetry.TelemetryVerbosity;
 
 public class SwerveSubsystem extends SubsystemBase
 {
-private final Field2d field = new Field2d();
+
   /**
    * Swerve drive object.
    */
@@ -76,10 +74,8 @@ private final Field2d field = new Field2d();
    *
    * @param directory Directory of swerve drive config files.
    */
-  
   public SwerveSubsystem(File directory)
   {
-    SmartDashboard.putData("Field", field);
     boolean blueAlliance = false;
     Pose2d startingPose = blueAlliance ? new Pose2d(new Translation2d(Meter.of(1),
                                                                       Meter.of(4)),
@@ -89,7 +85,7 @@ private final Field2d field = new Field2d();
                                                     Rotation2d.fromDegrees(180));
     // Configure the Telemetry before creating the SwerveDrive to avoid unnecessary objects being created.
     SwerveDriveTelemetry.verbosity = TelemetryVerbosity.HIGH;
-        try
+    try
     {
       swerveDrive = new SwerveParser(directory).createSwerveDrive(Constants.MAX_SPEED, startingPose);
       // Alternative method if you don't want to supply the conversion factor via JSON files.
@@ -142,14 +138,12 @@ private final Field2d field = new Field2d();
   @Override
   public void periodic()
   {
-    System.out.println("PERIODIC IS RUNNING");
     // When vision is enabled we must manually update odometry in SwerveDrive
     if (visionDriveTest)
     {
       swerveDrive.updateOdometry();
       vision.updatePoseEstimation(swerveDrive);
     }
-    field.setRobotPose(swerveDrive.getPose());
   }
 
   @Override
