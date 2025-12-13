@@ -122,7 +122,7 @@ public final class Constants {
         
         public static double kMaxAngularSpeed = 0;
         public static boolean kGyroReversed;
-        public static SwerveDriveKinematics kDriveKinematics;
+        public static SwerveDriveKinematics kDriveKinematics = new SwerveDriveKinematics(moduleLocations);
 
     }
 }
