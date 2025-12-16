@@ -76,39 +76,16 @@ public class Robot extends TimedRobot
    * This function is called once each time the robot enters Disabled mode.
    */
   @Override
-  public void disabledInit()
-  {
-    m_robotContainer.setMotorBrake(true);
-    disabledTimer.reset();
-    disabledTimer.start();
-  }
+  public void disabledInit(){  }
 
   @Override
-  public void disabledPeriodic()
-  {
-    if (disabledTimer.hasElapsed(Constants.DrivebaseConstants.WHEEL_LOCK_TIME))
-    {
-      m_robotContainer.setMotorBrake(false);
-      disabledTimer.stop();
-      disabledTimer.reset();
-    }
-  }
+  public void disabledPeriodic(){  }
 
   /**
    * This autonomous runs the autonomous command selected by your {@link RobotContainer} class.
    */
   @Override
-  public void autonomousInit()
-  {
-    m_robotContainer.setMotorBrake(true);
-    m_autonomousCommand = m_robotContainer.getAutonomousCommand();
-
-    // schedule the autonomous command (example)
-    if (m_autonomousCommand != null)
-    {
-      m_autonomousCommand.schedule();
-    }
-  }
+  public void autonomousInit(){  }
 
   /**
    * This function is called periodically during autonomous.
