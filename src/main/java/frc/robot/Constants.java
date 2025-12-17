@@ -106,23 +106,24 @@ public final class Constants {
 
         public static final int  kFrontLeftDrivingCanId = 1;
         public static final int kFrontLeftTurningCanId = 2;
-        public static final double kFrontLeftChassisAngularOffset = -62.51;
+        public static final double kFrontLeftChassisAngularOffset = -57.30;
 
         public static final int kFrontRightDrivingCanId = 3;
         public static final int kFrontRightTurningCanId = 4;
-        public static final double kFrontRightChassisAngularOffset = -179.82;
+        public static final double kFrontRightChassisAngularOffset = 3.60;
 
         public static final int kRearLeftDrivingCanId = 7;
         public static final int kRearLeftTurningCanId = 8;
-        public static final double kBackLeftChassisAngularOffset = 108.11;
+        public static final double kBackLeftChassisAngularOffset = -83.51;
 
         public static final int kRearRightDrivingCanId = 5;
         public static final int kRearRightTurningCanId = 6;
-        public static final double kBackRightChassisAngularOffset = 82.62;
+        public static final double kBackRightChassisAngularOffset = 153.13;
         
         public static double kMaxAngularSpeed = 0;
         public static boolean kGyroReversed;
         public static SwerveDriveKinematics kDriveKinematics = new SwerveDriveKinematics(moduleLocations);
-
+        public static boolean enableSwerveMotorTelemetry = true;
+        public static final boolean fastMode = true;
     }
 }

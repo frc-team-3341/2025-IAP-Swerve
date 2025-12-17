@@ -29,7 +29,7 @@ public class RobotContainer {
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the trigger bindings
-    //configureBindings();
+    configureBindings();
     createSwerve();
 
   }
@@ -50,7 +50,7 @@ public class RobotContainer {
     swerveDrive = new DriveSubsystem();
     swerveTeleop = new SwerveTeleop(swerveDrive, xbox);
 
-    //this.swerveDrive.setDefaultCommand(swerveTeleop);
+    this.swerveDrive.setDefaultCommand(swerveTeleop);
 
   }
 
