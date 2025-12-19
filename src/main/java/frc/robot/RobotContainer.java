@@ -6,10 +6,13 @@ package frc.robot;
 
 import frc.robot.Constants.OperatorConstants;
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.commands.SwerveTeleop;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -21,6 +24,7 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private DriveSubsystem swerveDrive;
   private SwerveTeleop swerveTeleop;
+// This puts the dropdown menu on your Shuffleboard/Glass
 
   // Replace with CommandPS4Controller or CommandJoystick if needed
   private final CommandXboxController xbox =
@@ -29,9 +33,10 @@ public class RobotContainer {
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the trigger bindings
-    configureBindings();
     createSwerve();
-
+    configureBindings();
+   
+SmartDashboard.putData("Auto Mode", swerveDrive.getAutoChooser());
   }
 
   /**
@@ -44,9 +49,11 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
+    xbox.b().onTrue(new InstantCommand(swerveDrive::stopMotors, swerveDrive));
   }
 
   public void createSwerve(){
+    xbox.y().onTrue(this.swerveDrive.resetHeadingCommand());
     swerveDrive = new DriveSubsystem();
     swerveTeleop = new SwerveTeleop(swerveDrive, xbox);
 
@@ -60,7 +67,7 @@ public class RobotContainer {
    * @return the command to run in autonomous
    */
   public Command getAutonomousCommand() {
-    // An example command will be run in autonomous
-    return null;
-  }
+    // This returns the command selected in the dropdown menu
+    return swerveDrive.getAutoChooser().getSelected();
+}
 }

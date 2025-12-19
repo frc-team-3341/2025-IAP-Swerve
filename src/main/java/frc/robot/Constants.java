@@ -125,5 +125,6 @@ public final class Constants {
         public static SwerveDriveKinematics kDriveKinematics = new SwerveDriveKinematics(moduleLocations);
         public static boolean enableSwerveMotorTelemetry = true;
         public static final boolean fastMode = true;
+        public static boolean isSim = Robot.isSimulation();
     }
 }
